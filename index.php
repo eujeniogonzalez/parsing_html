@@ -12,9 +12,9 @@ $tag_class_name = '.search-tags__item';
 // Get page HTML
 $page = curl_get_page ($parsing_url);
 $html = str_get_html($page);
-$tags = $html->find('li.search-tags__item');
 
 // Get tags array
+$tags = $html->find('li.search-tags__item');
 if (count($tags) > 0) {
 	foreach ($tags as $tag) {
 		$tags_values[] = $tag->plaintext;
